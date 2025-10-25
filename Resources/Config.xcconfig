@@ -1,0 +1,9 @@
+//
+//  Config.xcconfig
+//  PracticalHub
+//
+//  Created by David Egeler on 25.10.2025.
+//
+
+
+API_BASE_URL = https://api.dein-proxy.tld
