@@ -1,0 +1,21 @@
+name: iOS Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build (Simulator)
+        run: |
+          xcodebuild -scheme PracticalHub \
+                     -destination 'platform=iOS Simulator,name=iPhone 15' \
+                     -configuration Debug \
+                     build | xcpretty || exit ${PIPESTATUS[0]}
+      - name: Archive (no signing)
+        run: |
+          xcodebuild -scheme PracticalHub -configuration Release -archivePath build/PracticalHub.xcarchive archive | xcpretty || exit ${PIPESTATUS[0]}
