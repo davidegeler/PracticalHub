@@ -3,7 +3,7 @@ import SwiftUI
 struct RootTabView: View {
     var body: some View {
         TabView {
-            DailyView(viewModel: .init())
+            DailyView()
                 .tabItem { Label("Daily", systemImage: "sun.max") }
 
             LinksView(viewModel: .init())
