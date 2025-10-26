@@ -4,9 +4,8 @@
 //
 //  Created by David Egeler on 25.10.2025.
 //
-
-
 import Foundation
+
 protocol WeatherServiceProtocol {
-    func fetchWeather(for cities: [String], on date: Date) async throws -> [CityWeather]
+    func getWeather(for city: String) async throws -> CityWeather
 }

@@ -4,11 +4,10 @@
 //
 //  Created by David Egeler on 25.10.2025.
 //
-
-
 import Foundation
 
-struct CityWeather {
+
+struct CityWeather: Equatable {
     struct Day: Identifiable, Equatable {
         let id = UUID()
         let date: Date
@@ -20,5 +19,6 @@ struct CityWeather {
     let cityName: String
     let currentTemp: Double?
     let currentCode: Int?
-    let days: [Day]
+    let days: [Day]     // inkl. heute, max. 5
 }
+

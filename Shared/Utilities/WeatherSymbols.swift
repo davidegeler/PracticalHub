@@ -4,12 +4,10 @@
 //
 //  Created by David Egeler on 26.10.2025.
 //
-
-
 import Foundation
 
 enum WeatherSymbols {
-    static func symbolName(for code: Int, isDay: Bool = true) -> String {
+    static func name(for code: Int, isDay: Bool = true) -> String {
         switch code {
         case 0:                 return isDay ? "sun.max.fill" : "moon.stars.fill"
         case 1, 2:              return isDay ? "cloud.sun.fill" : "cloud.moon.fill"
@@ -29,3 +27,4 @@ enum WeatherSymbols {
         }
     }
 }
+
