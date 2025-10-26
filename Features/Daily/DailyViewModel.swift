@@ -44,7 +44,7 @@ final class DailyViewModel: ObservableObject {
         self.weatherService = weatherService
 
         // HIER: manuelles Testdatum setzen 👇
-        let testDate = Self.makeDate(weekday: 1) // 2 = Montag
+        let testDate = Self.makeDate(weekday: 6) // 2 = Montag
         self.snapshot = DailySnapshot(
             date: testDate,
             hasGym: false, training: nil,
