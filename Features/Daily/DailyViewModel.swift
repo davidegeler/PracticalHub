@@ -22,7 +22,7 @@ final class DailyViewModel: ObservableObject {
         date: Date = Date(),
         calendarService: CalendarServiceProtocol = MockCalendarService(),
         tasksService: TasksServiceProtocol = MockTasksService(),
-        weatherService: WeatherServiceProtocol = MockWeatherService()
+        weatherService: WeatherServiceProtocol = OpenMeteoWeatherService()
     ) {
         self.calendarService = calendarService
         self.tasksService = tasksService
@@ -37,7 +37,7 @@ final class DailyViewModel: ObservableObject {
         date: Date = Date(), // hier Standardwert ändern
         calendarService: CalendarServiceProtocol = MockCalendarService(),
         tasksService: TasksServiceProtocol = MockTasksService(),
-        weatherService: WeatherServiceProtocol = MockWeatherService()
+        weatherService: WeatherServiceProtocol = OpenMeteoWeatherService()
     ) {
         self.calendarService = calendarService
         self.tasksService = tasksService

@@ -7,8 +7,18 @@
 
 
 import Foundation
-struct CityWeather: Identifiable, Codable, Hashable {
-    let id: UUID = UUID()
-    var city: String
-    var summary: String // Placeholder, echte API später
+
+struct CityWeather {
+    struct Day: Identifiable, Equatable {
+        let id = UUID()
+        let date: Date
+        let weatherCode: Int
+        let tMin: Double
+        let tMax: Double
+    }
+
+    let cityName: String
+    let currentTemp: Double?
+    let currentCode: Int?
+    let days: [Day]
 }
